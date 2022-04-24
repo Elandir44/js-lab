@@ -49,7 +49,7 @@ a:hover {
 #menu {
 	width: 600px;
 	float: right;
-	margin-top: 15px;
+	margin-top: 5px;
 	margin-left: 50px;
 }
 
@@ -131,46 +131,13 @@ a:hover {
 	/*background: #151515;*/
 
 }
-/*.content_box {
-	width: 300px;
-	color: #666666;
-	padding: 5px;
-	float: left;
-
-}
-
-.content_box h2 {
-	font-size: 18px;
-	font-weight: normal;
-	font-family:"Trebuchet MS", Tahoma, Arial, Helvetica, Sans-serif;
-	border-bottom:5px solid #242424;
-	color: #1F6BB2;
-	padding: 0 0 5px 0;
-}
-
-.content_box p {
-	height: 110px;
-	font-family: Arial;
-	overflow: hidden;
-
-}
-
-.content_box p:hover {
-	height: auto;
-
-
-}
-
-.content_box_rm {
-	float: right;
-}*/
 
 #footer {
 	width: 960px;
 	float: left;
 	text-align: center;
 	font-size: 12px;
-	margin: 0 auto;
+	margin-top: 50px;
 	color: #ffffff;
 }
 
@@ -196,10 +163,10 @@ img {
 	/*margin-bottom: 30px;
 	margin-right: 10px;*/
 
-	width: 400px;
-    height: 400px;
+	width: 360px;
+    height: 360px;
     /*border: 1px solid #CCC;*/
-    margin: 140px;
+    margin: 50px;
     position: relative;
     perspective: 1000px;
 }
@@ -210,18 +177,9 @@ img {
     transform-style: preserve-3d;
     width: 100%;
     height: 100%;
-    animation: obracaniekostki 20s infinite alternate;
+    /*animation: obracaniekostki 5s infinite alternate;*/
 
 }
-
-/*#kostka:hover {
-    position: absolute;
-    transform-style: preserve-3d;
-    width: 100%;
-    height: 100%;
-    animation: obracaniekostki 10s infinite alternate;
-
-}*/
 
 .bok {
     /*opacity: 0.9;*/
@@ -234,7 +192,8 @@ img {
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: darkblue;
+    background-color: SlateBlue;
+    padding: 20px;
 
 
 }
@@ -297,6 +256,6 @@ div.bottom
     }
     to
     {
-        transform: rotateY(360deg) rotateX(360deg);
+        transform: rotateY(90deg); /* rotateX(360deg);*/
     }
 }
