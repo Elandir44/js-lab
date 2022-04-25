@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Muchomory</title>
+<title>Bot Inteligenty inaczej</title>
 
  <link rel="stylesheet" type="text/css" href="css/style.css" />
  
@@ -27,21 +27,36 @@
   <div id="kostka">
 
         <div class="bok front">
-            <h2>front</h2>
-            <input type="text" class="myTextField">
-            <button type="button" onclick="animacja()">Wyślij</button>
+            <h2>Cześć jak masz na imię?</h2>
+            <form id="formIntroduce">
+                <input type="text" name="myYoursName">
+                <button type="button" onclick="animacja()">Wyślij</button>
+            </form>
+            <br/>
+            <button type="button" onclick="animacjaBack()">Back</button>
+            <button type="button" onclick="animacjaLeft()">Left</button>
+            <button type="button" onclick="animacjaRigth()">Right</button>
+            <button type="button" onclick="animacjaTop()">Top</button>
+            <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
 
         <div class="bok back">
-            <h2>back</h2>
+            <h2>Gra w zgadywanie</h2>
             <input type="text" class="myTextField">
             <button type="button" onclick="animacja()">Wyślij</button>
+            <br/>
+            <button type="button" onclick="animacjaFront()">Front</button>
+            <button type="button" onclick="animacjaLeft()">Left</button>
+            <button type="button" onclick="animacjaRigth()">Right</button>
+            <button type="button" onclick="animacjaTop()">Top</button>
+            <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
 
         <div class="bok left">
            <h2>left</h2>
             <input type="text" class="myTextField">
             <button type="button" onclick="animacja()">Wyślij</button>
+
         </div>
 
         <div class="bok right">
