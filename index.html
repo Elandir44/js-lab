@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Bot Inteligenty inaczej</title>
@@ -27,11 +26,18 @@
   <div id="kostka">
 
         <div class="bok front">
-            <h2>Cześć jak masz na imię?</h2>
+
+            <h2>Przedstawmy się</h2>
+
+            <p>Cześć jak masz na imię?</p>
+
+            <div id="infoIntroduce"></div>
+
             <form id="formIntroduce">
-                <input type="text" name="myYoursName">
-                <button type="button" onclick="animacja()">Wyślij</button>
+                <input type="text" name="myYoursName" class="fieldText Name">
+                <button type="button" onclick="letsIntroduce()">Wyślij</button>
             </form>
+
             <br/>
             <button type="button" onclick="animacjaBack()">Back</button>
             <button type="button" onclick="animacjaLeft()">Left</button>
@@ -41,15 +47,23 @@
         </div>
 
         <div class="bok back">
-            <h2>Gra w zgadywanie</h2>
-            <input type="text" class="myTextField">
-            <button type="button" onclick="animacja()">Wyślij</button>
-            <br/>
-            <button type="button" onclick="animacjaFront()">Front</button>
-            <button type="button" onclick="animacjaLeft()">Left</button>
-            <button type="button" onclick="animacjaRigth()">Right</button>
-            <button type="button" onclick="animacjaTop()">Top</button>
-            <button type="button" onclick="animacjaBottom()">Bottom</button>
+
+                <h2>Gra w zgadywanie</h2>
+
+                <p id="gra">Myślałeś że soobie pograsz? O nie! Grał będę ja. Wpisz coś, a ja zgadnę co wcisnąłeś?</p>
+
+                <div id="infoPlay"></div>
+
+                <form id="formPlay">
+                    <input type="text" name="myTextGame" class="fieldText Play">
+                    <button type="button" onclick="animacja()">Wyślij</button>
+                </form>
+                <br/>
+                <button type="button" onclick="animacjaFront()">Front</button>
+                <button type="button" onclick="animacjaLeft()">Left</button>
+                <button type="button" onclick="animacjaRigth()">Right</button>
+                <button type="button" onclick="animacjaTop()">Top</button>
+                <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
 
         <div class="bok left">

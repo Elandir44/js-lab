@@ -1,27 +1,56 @@
 //bok front - Cześć jak masz na imię?
 
-function letsIntroduce() {
+window.onload = function() { //letsIntroduce() {
+
+    const poleTekstowe = document.getElementById("formIntroduce").myYoursName;
+   /* var info = document.getElementById("info");*/
+    //poleTekstowe.value = "aaaa";
 
 
+    poleTekstowe.onkeydown = function (e) {
+        const wcisnietyKlawisz = String.fromCharCode(e.which);
 
+        info.innerHTML = "Wcisnąłeś klawisz: " + wcisnietyKlawisz;
+    };
+
+
+//bok back Gra w zgadywanie
+    var myTextGame = document.getElementById("formPlay").myTextGame;
+
+    var info = document.getElementById("infoPlay");
+    //myYoursName.value = "asa";
+
+    const tablicaZnakow = [8, "Backspace", 9, "Tab", 13, "Enter", 16, "Shift", 17, "Ctrl", 18, "Alt", 19, "Pause/Break", 20, "Caps Lock", 32, "Spacja", 33, "Page UP", 34, "Page Down", 35, "End", 36, "Home", 37, "Strzałka w lewo", 38, "Strzałka w górę", 39, "Strzałka w prawo", 40, "Strzałka w dół", 45, "Insert", 46, "Delete", 91, "Znaczek Windows", 93, "Menu", 96, "0 na klawiaturze numerycznej", 97, "1 na klawiaturze numerycznej", 98, "2 na klawiaturze numerycznej", 99, "3 na klawiaturze numerycznej", 100, "4 na klawiaturze numerycznej", 101, "5 na klawiaturze numerycznej", 102, "6 na klawiaturze numerycznej", 103, "7 na klawiaturze numerycznej", 104, "8 na klawiaturze numerycznej", 105, "9 na klawiaturze numerycznej", 106, "* na klawiaturze numerycznej", 107, "+ na klawiaturze numerycznej", 109, "- na klawiaturze numerycznej", 110, ", na klawiaturze numerycznej", 111, ". na klawiaturze numerycznej", 144, "Num Lock", 145, "Scroll Lock", 173, "-", 188, ",", 190, ".", 191, "/", 192, "` ~"]; /*, 219, "'['", 220, "'\'", 221, "']'", 222, '"'];*/
+
+    var dlugoscTablicy = tablicaZnakow.length;
+
+    myTextGame.onkeydown = function (e) {
+
+        var kodKey = e.which;
+
+        for (var i = 0; i < dlugoscTablicy; i++){
+
+            var kod = tablicaZnakow[i];
+
+            if (kodKey == kod){
+                info.innerHTML = tablicaZnakow [i+1];
+                break
+            }
+            info.innerHTML = String.fromCharCode(e.which);
+        }
+
+    };
 }
 
 
+//bok left
 
-////bok back Gra w zgadywanie
-//
-//function letsPlay() {
-//
-//}
-//
-////bok left
-//
-////bok right
-//
-////bok top
-//
-////bok bottom
-//
+//bok right
+
+//bok top
+
+//bok bottom
+
 //animacje oobracania kostki
 
 /*
@@ -68,7 +97,6 @@ function animacjaBack() {
 
   animacja(x, y, z);
 }
-
 function animacjaLeft() {
   const x = 'rotateX(+0deg)';
   const y = 'rotateY(+90deg)';
