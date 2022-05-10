@@ -40,8 +40,18 @@ window.onload = function() { //letsIntroduce() {
         }
 
     };
+
 }
 
+function wyczysc() {
+
+    var myTextGame = document.getElementById("formPlay").myTextGame;
+    var info = document.getElementById("infoPlay");
+
+    myTextGame.value = "";
+    info.innerHTML = "";
+
+}
 
 //bok left
 
