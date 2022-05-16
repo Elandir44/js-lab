@@ -40,8 +40,8 @@
             </form>
 
             <br/>
-            <button type="button" onclick="animacjaBack()">Back</button>
-            <button type="button" onclick="animacjaLeft()">Left</button>
+            <button type="button" onclick="animacjaBack()">Gra</button>
+            <button type="button" onclick="animacjaLeft()">Generator</button>
             <button type="button" onclick="animacjaRigth()">Right</button>
             <button type="button" onclick="animacjaTop()">Top</button>
             <button type="button" onclick="animacjaBottom()">Bottom</button>
@@ -61,24 +61,51 @@
                 </form>
                 <br/>
                 <button type="button" onclick="animacjaFront()">Front</button>
-                <button type="button" onclick="animacjaLeft()">Left</button>
+                <button type="button" onclick="animacjaLeft()">Generator</button>
                 <button type="button" onclick="animacjaRigth()">Right</button>
                 <button type="button" onclick="animacjaTop()">Top</button>
                 <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
 
         <div class="bok left">
-           <h2>left</h2>
-            <input type="text" class="myTextField">
-            <button type="button" onclick="animacja()">Wyślij</button>
 
+            <h2>Generator wymówek</h2>
+
+            <p id="wymowki">"Potrzebujesz wymówki? Kliknij generuj a dostaniesz gotową"</p>
+
+            <div id="infoWymowki"></div>
+
+            <form id="formWymowki">
+<!--                <input type="text" name="myTextWymowki" class="fieldText Play">-->
+                <button type="button" onclick="wymowki()">Generuj</button>
+            </form>
+            <br/>
+            <button type="button" onclick="animacjaFront()">Front</button>
+            <button type="button" onclick="animacjaBack()">Gra</button>
+            <button type="button" onclick="animacjaRigth()">Right</button>
+            <button type="button" onclick="animacjaTop()">Top</button>
+            <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
 
         <div class="bok right">
             <h2>right</h2>
-            <input type="text" class="myTextField">
-            <button type="button" onclick="animacja()">Wyślij</button>
-         </div>
+
+            <p id="pisanie">"Potrzebujesz wymówki? Kliknij generuj a dostaniesz gotową"</p>
+
+            <div id="infoPisanie"></div>
+
+            <form id="formPisanie">
+                <input type="text" name="myTextPisanie" class="fieldText Play">
+                <button type="button" onclick="pisanie()">Pisz</button>
+            </form>
+            <br/>
+            <button type="button" onclick="animacjaFront()">Front</button>
+            <button type="button" onclick="animacjaBack()">Gra</button>
+            <button type="button" onclick="animacjaLeft()">Generator</button>
+            <button type="button" onclick="animacjaTop()">Top</button>
+            <button type="button" onclick="animacjaBottom()">Bottom</button>
+        </div>
+
 
         <div class="bok top">
             <h2>top</h2>

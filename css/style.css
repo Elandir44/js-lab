@@ -161,11 +161,12 @@ img {
 }
 
 #infoIntroduce {
-	width: 200px;
+	width: 360px;
 	height: 100px;
 	/*border: 1px solid #000;*/
 	padding: 10px;
 	background: #0000;
+	font-size: medium;
 
 }
 
@@ -175,6 +176,27 @@ img {
 	/*border: 1px solid #000;*/
 	padding: 10px;
 	background: #0000;
+	font-size: medium;
+
+}
+
+#infoWymowki {
+	width: 360px;
+	height: 100px;
+	/*border: 1px solid #000;*/
+	padding: 10px;
+	background: #0000;
+	/*margin-right: 5px;*/
+
+}
+
+#infoPisanie {
+	width: 360px;
+	height: 100px;
+	/*border: 1px solid #000;*/
+	padding: 10px;
+	background: #0000;
+	/*margin-right: 5px;*/
 
 }
 

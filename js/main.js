@@ -35,8 +35,17 @@ function wyczysc() {
     let myTextGame = document.getElementById("formPlay").myTextGame;
     let info = document.getElementById("infoPlay");
 
-    myTextGame.value = "";
-    info.innerHTML = "";
+    let firstSign = myTextGame.value.substring(0, 1);
+
+    if (firstSign == "/") {
+
+        komendy(info, myTextGame);
+
+    } else {
+
+        myTextGame.value = "";
+        info.innerHTML = "";
+    }
 
 }
 
@@ -48,19 +57,25 @@ function letsIntroduce () {
 
     let guestName = myYoursName.value;
     let firstSign = guestName.substring(0, 1);
-    // var firstSign = guestName.charCodeAt(0);
+    //var firstSign = guestName.charCodeAt(0);
     let nameLenght = guestName.length;
 
-        for (let k = 0; k < nameLenght; k++) {
+    if (firstSign == "/") {
 
-            let nextSign = guestName.substring(k, k + 1);
+        komendy(infoIntroduce, myYoursName);
+
+    } else {
+
+    for (let k = 0; k < nameLenght; k++) {
+
+        let nextSign = guestName.substring(k, k + 1);
 
             if (!isNaN(nextSign * 1)) {
 
                 let wnerw = Math.floor(Math.random() * 100 + 1);
 
-                if (wnerw > 50){
-                    infoIntroduce.innerHTML   = 'Kufa cyfra w imieniu? Co ty myślisz, że jesteś jakiś piepszony Henryk III ?!';
+                if (wnerw > 50) {
+                    infoIntroduce.innerHTML = 'Kufa cyfra w imieniu? Co ty myślisz, że jesteś jakiś piepszony Henryk III ?!';
                 } else {
                     infoIntroduce.innerHTML = 'Cyfra w imieniu? Co ty myślisz, że jesteś jakiś Henryk III ?!';
                 }
@@ -68,22 +83,91 @@ function letsIntroduce () {
                 break;
             } else {
                 if (firstSign == firstSign.toUpperCase()) {
-                    infoIntroduce.innerHTML = 'Witaj ' + guestName;
+                    infoIntroduce.innerHTML = 'Witaj ' + guestName + ". Jak tam zajęcie z JavaSctipt? ";
                 }
                 if (firstSign == firstSign.toLowerCase()) {
-                    infoIntroduce.innerHTML = 'siemka ' + guestName;
+                    infoIntroduce.innerHTML = 'siemka ' + guestName + "! Co tam mordo?";
                 }
             }
         }
-}
 
+
+    }
+}
 //bok left
 
+
+function wymowki () {
+
+const wymowkiPoczatek = ["SŁUCHAJ, PRZYKRO MI ALE", "NO NIE UWIERZYSSZ!", "NIE MOGĘ DZISIAJ, BO", "ODPUSZCZĘ, BO WŁAŚNIE", "WIEM JAK TO BRZMI ALE", "NIE DAM RADY, BO WŁAŚNIE", "STRASZNIE ŻAŁUJĘ, ALE"];
+
+const wymowkiKto = ["KOT SĄSIADA", "MÓJ DYREKTOR", "WICEPREMIER", "ANDRZEJ (WIESZ KTÓRY)", "TWÓJ STARY", "JAKIŚ RUSKI", "TEN ZIOMEK Z 2 PIĘTRA"];
+
+const wymowkiCoZrobil = ["WŁAŚNIE ZAJEBAŁ MI ROWER", "NASRAŁ W PRZEDPOKOJU", "ZARAZIŁ MNIE JAKIMŚ GÓWNEM", "WSKOCZYŁ MI DO STUDNI", "WYPIŁ MI CAŁA WODĘ Z KIBLA", "LATA NAGI PO MOIM TRAWNIKU", "PRZEBRAŁ SIĘ ZA KROWĘ I MUCZY"];
+
+    let myTextWymowki= document.getElementById("formWymowki").myTextWymowki;
+    let infoWymowki = document.getElementById("infoWymowki");
+
+    let losPoczatek= Math.floor(Math.random() * 7);
+    let losKto= Math.floor(Math.random() * 7);
+    let losCoZrobil= Math.floor(Math.random() * 7);
+
+    let poczatek = wymowkiPoczatek[losPoczatek];
+    let kto = wymowkiKto[losKto];
+    let coZrobil = wymowkiCoZrobil[losCoZrobil];
+
+    infoWymowki.innerHTML = "Oto twoja wymówka: " + poczatek + " " + kto + " " + coZrobil + ".";
+
+}
+
+
+
 //bok right
+
+function pisanie (){
+
+    let myTextPisanie = document.getElementById("formPisanie").myTextPisanie;
+    let infoPisanie = document.getElementById("infoPisanie");
+
+    var tekst = "NIE MOGĘ DZISIAJ, BO TWÓJ STARY PRZEBRAŁ SIĘ ZA KROWĘ I MUCZY.";
+
+    var i =0;
+
+    var nextLeter = tekst.substring(i, i+1);
+
+    i++
+
+    infoPisanie.innerHTML = infoPisanie.valueOf() + nextLeter;
+
+    setTimeout("pisanie()", 500);
+
+
+
+}
 
 //bok top
 
 //bok bottom
+
+
+function komendy (info, box) {
+
+    const version = "Wersja oprogramowania: v1.2.3"
+
+    if (box.value == "/version") {
+
+        info.innerHTML = version;
+    } else if (box.value == "/pogoda kraków" ) {
+        info.innerHTML = "W kraków jest 22 stopnie";
+    } else if (box.value == "/gra"){
+        animacjaBack();
+    } else if (box.value == "/generator"){
+        animacjaLeft();
+    }
+
+
+
+}
 
 //animacje oobracania kostki
 
