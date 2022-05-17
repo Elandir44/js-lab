@@ -1,7 +1,7 @@
 // noinspection LoopStatementThatDoesntLoopJS
 
 window.onload = function() {
-
+	
 //bok back Gra w zgadywanie
     let myTextGame = document.getElementById("formPlay").myTextGame;
 
@@ -25,9 +25,7 @@ window.onload = function() {
             }
             info.innerHTML = String.fromCharCode(e.which);
         }
-
     };
-
 };
 
 function wyczysc() {
@@ -37,7 +35,7 @@ function wyczysc() {
 
     let firstSign = myTextGame.value.substring(0, 1);
 
-    if (firstSign == "/") {
+    if (firstSign === "/") {
 
         komendy(info, myTextGame);
 
@@ -46,10 +44,23 @@ function wyczysc() {
         myTextGame.value = "";
         info.innerHTML = "";
     }
-
 }
 
+
 //bok front - Cześć jak masz na imię?
+
+    let input = document.getElementById("fieldTextName");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("wyslijBtn").click();
+  }
+});
 
 function letsIntroduce () {
     let myYoursName = document.getElementById("formIntroduce").myYoursName;
@@ -59,8 +70,9 @@ function letsIntroduce () {
     let firstSign = guestName.substring(0, 1);
     //var firstSign = guestName.charCodeAt(0);
     let nameLenght = guestName.length;
+    let tekst = "";
 
-    if (firstSign == "/") {
+    if (firstSign === "/") {
 
         komendy(infoIntroduce, myYoursName);
 
@@ -75,23 +87,34 @@ function letsIntroduce () {
                 let wnerw = Math.floor(Math.random() * 100 + 1);
 
                 if (wnerw > 50) {
-                    infoIntroduce.innerHTML = 'Kufa cyfra w imieniu? Co ty myślisz, że jesteś jakiś piepszony Henryk III ?!';
+                    //infoIntroduce.innerHTML = 'Kufa cyfra w imieniu? Co ty myślisz, że jesteś jakiś piepszony Henryk III ?!';
+					tekst = 'Kufa cyfra w imieniu? Co ty myślisz, że jesteś jakiś piepszony Henryk III ?!';
+					
+					wypisz(tekst, infoIntroduce);
+					
                 } else {
-                    infoIntroduce.innerHTML = 'Cyfra w imieniu? Co ty myślisz, że jesteś jakiś Henryk III ?!';
+                    //infoIntroduce.innerHTML = 'Cyfra w imieniu? Co ty myślisz, że jesteś jakiś Henryk III ?!';
+					
+					tekst = 'Cyfra w imieniu? Co ty myślisz, że jesteś jakiś Henryk III ?!';
+					
+					wypisz(tekst, infoIntroduce);
                 }
-
                 break;
             } else {
-                if (firstSign == firstSign.toUpperCase()) {
-                    infoIntroduce.innerHTML = 'Witaj ' + guestName + ". Jak tam zajęcie z JavaSctipt? ";
+                if (firstSign === firstSign.toUpperCase()) {
+                    //infoIntroduce.innerHTML = 'Witaj ' + guestName + ". Jak tam zajęcie z JavaSctipt? ";
+					tekst = 'Witaj ' + guestName + ". Jak tam zajęcie z JavaSctipt? ";
+					
+					wypisz(tekst, infoIntroduce);
                 }
-                if (firstSign == firstSign.toLowerCase()) {
-                    infoIntroduce.innerHTML = 'siemka ' + guestName + "! Co tam mordo?";
+                if (firstSign === firstSign.toLowerCase()) {
+                    //infoIntroduce.innerHTML = 'siemka ' + guestName + "! Co tam mordo?";
+					tekst = 'Siemka ' + guestName + "! Co tam mordo?";
+					
+					wypisz(tekst, infoIntroduce);
                 }
             }
         }
-
-
     }
 }
 //bok left
@@ -105,8 +128,10 @@ const wymowkiKto = ["KOT SĄSIADA", "MÓJ DYREKTOR", "WICEPREMIER", "ANDRZEJ (WI
 
 const wymowkiCoZrobil = ["WŁAŚNIE ZAJEBAŁ MI ROWER", "NASRAŁ W PRZEDPOKOJU", "ZARAZIŁ MNIE JAKIMŚ GÓWNEM", "WSKOCZYŁ MI DO STUDNI", "WYPIŁ MI CAŁA WODĘ Z KIBLA", "LATA NAGI PO MOIM TRAWNIKU", "PRZEBRAŁ SIĘ ZA KROWĘ I MUCZY"];
 
-    let myTextWymowki= document.getElementById("formWymowki").myTextWymowki;
+    // let myTextWymowki= document.getElementById("formWymowki").myTextWymowki;
     let infoWymowki = document.getElementById("infoWymowki");
+	let wymowki = document.getElementById("wymowki");
+
 
     let losPoczatek= Math.floor(Math.random() * 7);
     let losKto= Math.floor(Math.random() * 7);
@@ -116,34 +141,62 @@ const wymowkiCoZrobil = ["WŁAŚNIE ZAJEBAŁ MI ROWER", "NASRAŁ W PRZEDPOKOJU",
     let kto = wymowkiKto[losKto];
     let coZrobil = wymowkiCoZrobil[losCoZrobil];
 
-    infoWymowki.innerHTML = "Oto twoja wymówka: " + poczatek + " " + kto + " " + coZrobil + ".";
+    wymowki.innerHTML = "Oto twoja wymówka na dziś: ";
+	
+	//infoWymowki.innerHTML = poczatek + " " + kto + " " + coZrobil + ".";
 
+    let tekst = poczatek + " " + kto + " " + coZrobil + ".";
+
+    wypisz (tekst, infoWymowki);
+	
 }
-
-
 
 //bok right
+let myTextPisanie = document.getElementById("formPisanie").myTextPisanie;
+let infoPisanie = document.getElementById("infoPisanie");
+let piszBtn = document.getElementById("piszBtn");
 
-function pisanie (){
+piszBtn.onclick = function(){
 
-    let myTextPisanie = document.getElementById("formPisanie").myTextPisanie;
-    let infoPisanie = document.getElementById("infoPisanie");
+    let tekstDoNapisania = myTextPisanie.value;
 
-    var tekst = "NIE MOGĘ DZISIAJ, BO TWÓJ STARY PRZEBRAŁ SIĘ ZA KROWĘ I MUCZY.";
+    wypisz(tekstDoNapisania, infoPisanie)
+}
 
-    var i =0;
+	function wypisz (tekst, uchwyt) {
 
-    var nextLeter = tekst.substring(i, i+1);
+        let napis = "";
+        let i = 0;
 
-    i++
+        setTimeout(function() {
+				pisanie (uchwyt, tekst, napis, i);
+			}				
+			, 100);
+	}
 
-    infoPisanie.innerHTML = infoPisanie.valueOf() + nextLeter;
-
-    setTimeout("pisanie()", 500);
 
 
+function pisanie (infoPisanie, tekst, napis, i){
+
+    let nextLeter = tekst.substring(i, i + 1);
+    let tekstDlugosc = tekst.length;
+
+    napis = napis + nextLeter;
+	
+	infoPisanie.innerHTML = napis;
+	i++;
+	
+	if (i === tekstDlugosc) {
+		return
+	}
+	
+	setTimeout(function(){
+		pisanie(infoPisanie, tekst, napis, i);
+	}
+	, 100);	
 
 }
+
 
 //bok top
 
@@ -154,19 +207,18 @@ function komendy (info, box) {
 
     const version = "Wersja oprogramowania: v1.2.3"
 
-    if (box.value == "/version") {
+    if (box.value === "/version") {
 
         info.innerHTML = version;
-    } else if (box.value == "/pogoda kraków" ) {
+    } else if (box.value === "/pogoda kraków" ) {
         info.innerHTML = "W kraków jest 22 stopnie";
-    } else if (box.value == "/gra"){
+    } else if (box.value === "/gra"){
         animacjaBack();
-    } else if (box.value == "/generator"){
+    } else if (box.value === "/generator"){
         animacjaLeft();
+    } else if (box.value === "/dyktando"){
+        animacjaRigth();
     }
-
-
-
 }
 
 //animacje oobracania kostki
@@ -178,7 +230,6 @@ animacjaLeft: X+0 Y+90 Z+0
 animacjaTop: X-90 Y+0 Z+0
 animacjaBottom: X+90 Y+0 Z+0
 animacjaBack: X-180 Y+0 Z+180
-
 [0, 0, 0, 0, -90, 0, 0, 90, 0, -90, 0, 0, 90, 0, 0, -180, 0, 180]
 */
 
@@ -247,5 +298,3 @@ function animacjaBottom() {
 
   animacja(x, y, z);
 }
-
-

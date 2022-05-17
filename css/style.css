@@ -181,12 +181,13 @@ img {
 }
 
 #infoWymowki {
-	width: 360px;
+	width: 350px;
 	height: 100px;
 	/*border: 1px solid #000;*/
 	padding: 10px;
 	background: #0000;
 	/*margin-right: 5px;*/
+	font-size: medium;
 
 }
 
@@ -201,6 +202,14 @@ img {
 }
 
 .fieldText {
+	width: 280px;
+	font-family: monospace;
+	background-color: #6495ED; /*chabrowy;*/
+	/*color: Indigo;*/
+	/*border-color: 0px #6495ED;*/
+}
+
+#fieldTextName {
 	width: 280px;
 	font-family: monospace;
 	background-color: #6495ED; /*chabrowy;*/

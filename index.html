@@ -29,20 +29,20 @@
 
             <h2>Przedstawmy się</h2>
 
-            <p>Cześć jak masz na imię?</p>
+            <p>Cześć jestem Bii. A ty jak masz na imię?</p>
 
             <div id="infoIntroduce"></div>
 
 
             <form id="formIntroduce">
-                <input type="text" name="myYoursName" class="fieldText Name">
-                <button type="button" onclick="letsIntroduce()">Wyślij</button>
+                <input type="text" name="myYoursName" id="fieldTextName">
+                <button type="button" id="wyslijBtn" onclick="letsIntroduce()">Wyślij</button>
             </form>
 
             <br/>
             <button type="button" onclick="animacjaBack()">Gra</button>
             <button type="button" onclick="animacjaLeft()">Generator</button>
-            <button type="button" onclick="animacjaRigth()">Right</button>
+            <button type="button" onclick="animacjaRigth()">Dyktando</button>
             <button type="button" onclick="animacjaTop()">Top</button>
             <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
@@ -62,7 +62,7 @@
                 <br/>
                 <button type="button" onclick="animacjaFront()">Front</button>
                 <button type="button" onclick="animacjaLeft()">Generator</button>
-                <button type="button" onclick="animacjaRigth()">Right</button>
+                <button type="button" onclick="animacjaRigth()">Dyktando</button>
                 <button type="button" onclick="animacjaTop()">Top</button>
                 <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
@@ -82,21 +82,21 @@
             <br/>
             <button type="button" onclick="animacjaFront()">Front</button>
             <button type="button" onclick="animacjaBack()">Gra</button>
-            <button type="button" onclick="animacjaRigth()">Right</button>
+            <button type="button" onclick="animacjaRigth()">Dyktando</button>
             <button type="button" onclick="animacjaTop()">Top</button>
             <button type="button" onclick="animacjaBottom()">Bottom</button>
         </div>
 
         <div class="bok right">
-            <h2>right</h2>
+            <h2>Dyktando</h2>
 
-            <p id="pisanie">"Potrzebujesz wymówki? Kliknij generuj a dostaniesz gotową"</p>
+            <p id="pisanie">"Napisz coś a ja to przepiszę."</p>
 
             <div id="infoPisanie"></div>
 
             <form id="formPisanie">
                 <input type="text" name="myTextPisanie" class="fieldText Play">
-                <button type="button" onclick="pisanie()">Pisz</button>
+                <button type="button" id="piszBtn" onclick="pisanie()">Pisz</button>
             </form>
             <br/>
             <button type="button" onclick="animacjaFront()">Front</button>
@@ -112,6 +112,7 @@
             <input type="text" class="myTextField">
             <button type="button" onclick="animacja()">Wyślij</button>
       </div>
+
 
         <div class="bok bottom">
             <h2>bottom</h2>
