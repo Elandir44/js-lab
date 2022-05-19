@@ -122,7 +122,7 @@ function letsIntroduce () {
 
 function wymowki () {
 
-const wymowkiPoczatek = ["SŁUCHAJ, PRZYKRO MI ALE", "NO NIE UWIERZYSSZ!", "NIE MOGĘ DZISIAJ, BO", "ODPUSZCZĘ, BO WŁAŚNIE", "WIEM JAK TO BRZMI ALE", "NIE DAM RADY, BO WŁAŚNIE", "STRASZNIE ŻAŁUJĘ, ALE"];
+const wymowkiPoczatek = ["SŁUCHAJ, PRZYKRO MI ALE", "NO NIE UWIERZYSZ!", "NIE MOGĘ DZISIAJ, BO", "ODPUSZCZĘ, BO WŁAŚNIE", "WIEM JAK TO BRZMI ALE", "NIE DAM RADY, BO WŁAŚNIE", "STRASZNIE ŻAŁUJĘ, ALE"];
 
 const wymowkiKto = ["KOT SĄSIADA", "MÓJ DYREKTOR", "WICEPREMIER", "ANDRZEJ (WIESZ KTÓRY)", "TWÓJ STARY", "JAKIŚ RUSKI", "TEN ZIOMEK Z 2 PIĘTRA"];
 
@@ -171,7 +171,7 @@ piszBtn.onclick = function(){
         setTimeout(function() {
 				pisanie (uchwyt, tekst, napis, i);
 			}				
-			, 100);
+			, 50);
 	}
 
 
@@ -193,12 +193,30 @@ function pisanie (infoPisanie, tekst, napis, i){
 	setTimeout(function(){
 		pisanie(infoPisanie, tekst, napis, i);
 	}
-	, 100);	
+	, 50);
 
 }
 
 
 //bok top
+
+    var kosteczka1 = document.getElementById("kosteczka1");
+    var kosteczka2 = document.getElementById("kosteczka2");
+    var kosteczka3 = document.getElementById("kosteczka3");
+    var kosteczka4 = document.getElementById("kosteczka4");
+    var kosteczka5 = document.getElementById("kosteczka5")
+
+    let losKosteczka1 = Math.floor(Math.random() * 6);
+
+    function rzutKoscmi() {
+
+
+
+
+
+    }
+
+
 
 //bok bottom
 

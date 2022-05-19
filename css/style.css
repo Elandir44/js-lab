@@ -198,7 +198,34 @@ img {
 	padding: 10px;
 	background: #0000;
 	/*margin-right: 5px;*/
+	font-size: medium;
 
+}
+
+#infoGraKosci{
+	width: 360px;
+	height: 100px;
+	/*border: 1px solid #000;*/
+	padding: 10px;
+	background: #0000;
+	/*margin-right: 5px;*/
+
+}
+
+#tabelaWynikow {
+
+	width: 350px;
+	height: 50px;
+	/*border: 1px solid #000;*/
+}
+
+#tabelaWynikow td{
+
+	width: 50%;
+	height: 50%;
+	border: 1px solid #000;
+	font-size: medium;
+	text-align: right;
 }
 
 .fieldText {
@@ -253,9 +280,8 @@ img {
 	margin-right: 20px;
 	background-color: SlateBlue;
 	padding: 20px;
-
-
 }
+
 .bok h2{
 	font-size: 20px;
 	color: white;
@@ -269,7 +295,7 @@ img {
 }
 
 .bok p {
-	font-size: 12px;
+	font-size: 16px;
 	color: white;
 	text-align: justify;
 	margin-left: 20px;
@@ -306,6 +332,7 @@ div.bottom
 {
 	/*background-color: orange;*/
 	transform: rotateX(-90deg) translateZ(200px);
+	background: url(../images/stronawbudowie.png);
 }
 
 .opis_bota {
@@ -313,6 +340,84 @@ div.bottom
 	font-size: large;
 }
 
+.kontenerNaKosteczke {
+	float: left;
+	/*margin-bottom: 30px;
+	margin-right: 10px;*/
+	width: 50px;
+	height: 50px;
+	/*border: 1px solid #CCC;*/
+	margin: 5px;
+	position: relative;
+	perspective: 2000px;
+}
+
+#kosteczka {
+	position: relative;
+	/*left: 50px;*/
+	transform-style: preserve-3d;
+	width: 100%;
+	height: 100%;
+	/*border: 1px solid #CCC;*/
+
+	/*animation: obracaniekostki 5s infinite alternate;*/
+
+}
+
+.boczek {
+	/*opacity: 0.9;*/
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	font-size: 10px;
+	color: white;
+	line-height: 20px;
+	text-align: center;
+	margin-top: 20px;
+	font-size: large;
+	padding-top: 30%;
+	/*padding-bottom:20%;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: SlateBlue;
+	padding: 10px;*/
+}
+
+div.one
+{
+	/*background-color: red;*/
+	transform: translateZ(25px);
+	background: url(../images/bok1.jpg);
+}
+div.two
+{
+	/*background-color: blue;*/
+	transform: rotateY(180deg) translateZ(25px); /*rotateX(-180deg)*/
+	background: url(../images/bok2.jpg);
+}
+div.three
+{
+	/*background-color: purple;*/
+	transform: rotateY(-90deg) translateZ(25px);
+	background: url(../images/bok3.jpg);
+
+}
+div.four
+{
+	/*background-color: green;*/
+	transform: rotateY(90deg) translateZ(25px);
+	background: url(../images/bok4.jpg);
+}
+div.five
+{
+	/*background-color: teal;*/
+	transform: rotateX(90deg) translateZ(25px);
+	background: url(../images/bok5.jpg);
+}
+div.six {
+	/*background-color: orange;*/
+	transform: rotateX(-90deg) translateZ(25px);
+}
 /*@keyframes obracaniekostki
 {
     from
