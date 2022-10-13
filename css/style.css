@@ -418,6 +418,31 @@ div.six {
 	/*background-color: orange;*/
 	transform: rotateX(-90deg) translateZ(25px);
 }
+
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;   
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #9900FF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #990099 }
+
+.button:active {
+  background-color: #3990099 ;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
+
 /*@keyframes obracaniekostki
 {
     from
